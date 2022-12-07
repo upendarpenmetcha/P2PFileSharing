@@ -112,9 +112,9 @@ public class peerProcess {
                  * */
                 peer.Interested_Message_Send(); 
               } else {
-//              /*
-//              * Tells I don't want anything from this connection
-//              * */
+            /*
+             * Tells I don't want anything from this connection
+              * */
                 peer.Not_Interested_Message_Send() ;
               }
 
@@ -268,13 +268,13 @@ public class peerProcess {
               System.out.println("PEER is choked");
             } else {
               /*
-               * Their is a problem
+               * problem
                */
               ccc++;
             }
           }
           /*
-           * Peer get all the data
+           * Peer gets all the data
            */
          
           writer.close();
@@ -302,7 +302,6 @@ public class peerProcess {
       this.conn = conn;
       this.Peer_ID = Peer_ID;
       (new Background_Main_Thread(this)).start();
-
     }
 
     public double Download_Speed_Fetch() {
@@ -404,7 +403,6 @@ public class peerProcess {
           int a;
           byte[] Packet_result = new byte[ln + 4];
           byte[] ln_Header = ByteBuffer.allocate(4).putInt(ln).array();
-          //for (byte x : length) {
           for (a=0; a < ln_Header.length;a++) {
         	byte y = ln_Header[a];
         	Packet_result[count++] = y;
@@ -859,7 +857,7 @@ public class peerProcess {
           
           try {
               BufferedWriter writer = new BufferedWriter(new FileWriter(File_Log.getAbsolutePath(), true));
-              Helper_Functions.Log(writer, Cur_Node_Id, Peer_ID, "From connection");
+              Helper_Functions.Log(writer, Cur_Node_Id, Peer_ID, "connectionFrom");
               writer.close();
           } catch(IOException e) {
         	  System.out.println("In Server Thread there is an error in write to logs ");
@@ -878,7 +876,7 @@ public class peerProcess {
           byte[] Packet_Of_HandShake_Generated = Helper_Functions.Handshake_Packet_Generate(Cur_Node_Id);
           Output_Stream_Connection.flush();
           Output_Stream_Connection.write(Packet_Of_HandShake_Generated);
-
+          BufferedWriter writer = new BufferedWriter(new FileWriter(File_Log.getAbsolutePath(), true));
           Map_Connections.put(Peer_ID, new Adjacent_Connection_Node(conn, Peer_ID));
           
           Connection_Map_Len = Map_Connections.size();
@@ -936,7 +934,7 @@ public class peerProcess {
 	            
 	          try {
 	                BufferedWriter writer = new BufferedWriter(new FileWriter(File_Log.getAbsolutePath(), true));
-	                Helper_Functions.Log(writer, Cur_Node_Id, key_Val, "connection_To");           
+	                Helper_Functions.Log(writer, Cur_Node_Id, key_Val, "connectionTo");           
 	                writer.close();
 	          } catch (IOException exx) {
 	            System.out.println("error to running Logs operation ");
@@ -1422,7 +1420,7 @@ public class peerProcess {
           
           try {
         	BufferedWriter writer = new BufferedWriter(new FileWriter(File_Log.getAbsolutePath(), true));
-            Helper_Functions.Log(writer, Current_Node.Get_Peer_ID(), Connection_Random.Get_Peer_ID(), "change Unchocked Optimistically Neighbor");
+            Helper_Functions.Log(writer, Current_Node.Get_Peer_ID(), Connection_Random.Get_Peer_ID(), "changeUnchoke_OptimisticallydNeighbor");
             writer.close();
           } catch (IOException e1) {
             System.out.println("Problem with adding Optimistically unchoked peer logs");

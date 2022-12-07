@@ -127,7 +127,7 @@ public class Helper_Functions {
       Log_Write.append(Time_Format.format(Time)+": Peer [" + ID_1 + "] makes a connection to Peer [" + ID_2 + "].");
 
     }  else if (Type_Of_Message == "changeUnchoke_OptimisticallydNeighbor") {
-      Log_Write.append(Time_Format.format(Time)+": Peer [" + "] has the optimistically unchoked neighbor [" + ID_2 + "].");
+      Log_Write.append(Time_Format.format(Time)+": Peer [" + ID_1 + "] has the optimistically unchoked neighbor [" + ID_2 + "].");
     }
     try {
       String Last_Value;

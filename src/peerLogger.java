@@ -1,12 +1,3 @@
-
-/**
- * Class PeerLogger for logging purpose
- *
- * @author Saksham Goel
- * @author Fnu Ojasvi
- * @author Destinee Gant
- */
-
 import java.util.logging.FileHandler;
 import java.util.logging.Formatter;
 import java.util.logging.Handler;
