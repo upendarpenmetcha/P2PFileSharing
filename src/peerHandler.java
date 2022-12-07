@@ -1,12 +1,4 @@
 
-/**
- * Class PeerHandler. Responsible for handling peers.
- *
- * @author Saksham Goel
- * @author Fnu Ojasvi
- * @author Destinee Gant
- */
-
 import java.util.BitSet;
 import java.util.HashMap;
 import java.util.List;

@@ -1,10 +1,4 @@
-/**
- * This class defines a peer and its related operations.
- *
- * @author Saksham Goel
- * @author Fnu Ojasvi
- * @author Destinee Gant
- */
+
 
 import java.util.BitSet;
 import java.util.concurrent.atomic.AtomicInteger;

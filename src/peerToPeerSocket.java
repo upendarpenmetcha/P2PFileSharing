@@ -1,12 +1,4 @@
 
-/**
- * Class peerToPeerSocket to handles all the socket level operations
- *
- * @author Saksham Goel
- * @author Fnu Ojasvi
- * @author Destinee Gant
- */
-
 import java.io.IOException;
 import java.net.Socket;
 
